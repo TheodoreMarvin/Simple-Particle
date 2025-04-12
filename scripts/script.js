@@ -5,13 +5,14 @@ canvas.height = window.innerHeight
 
 let hue = 0
 const particlesArray = []
-let particleAmount
-let hueChangeSpeed
+let particleAmount = 5
+let hueChangeSpeed = 3
 
 window.addEventListener("resize", function() {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 })
+
 
 function livelyPropertyListener(name, val) {
     if (name == "particleAmount") {

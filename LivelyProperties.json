@@ -2,7 +2,7 @@
     "particleAmount": {
         "max": 20,
         "min": 1,
-        "step": 0.1,
+        "step": 1,
         "text": "Particle Amount",
         "type": "slider",
         "help": "Control the amount of particles",
@@ -11,7 +11,7 @@
     "hueChangeSpeed": {
         "max": 10,
         "min": 1,
-        "step": 0.1,
+        "step": 1,
         "text": "Hue Changing Speed",
         "type": "slider",
         "help": "Control how fast the color changes",

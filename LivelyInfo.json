@@ -1,0 +1,14 @@
+{
+    "AppVersion": "2.1.0.8",
+    "Title": "Simple Particle",
+    "Thumbnail": null,
+    "Preview": null,
+    "Desc": "Simple particle that interacts with your cursor",
+    "Author": null,
+    "License": null,
+    "Contact": null,
+    "Type": 1,
+    "FileName": "index.html",
+    "Arguments": null,
+    "IsAbsolutePath": false
+}
