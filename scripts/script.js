@@ -5,11 +5,22 @@ canvas.height = window.innerHeight
 
 let hue = 0
 const particlesArray = []
+let particleAmount
+let hueChangeSpeed
 
 window.addEventListener("resize", function() {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 })
+
+function livelyPropertyListener(name, val) {
+    if (name == "particleAmount") {
+        particleAmount = val
+    }
+    else if (name == "hueChangeSpeed") {
+        hueChangeSpeed = val
+    }
+}
 
 class Particle {
     constructor() {
@@ -31,7 +42,6 @@ class Particle {
 
     draw() {
         ctx.fillStyle = this.color
-        // ctx.lineWidth = 6
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
         ctx.fill()
@@ -46,7 +56,7 @@ const mouse = {
 canvas.addEventListener("mousemove", function(event) {
     mouse.x = event.x;
     mouse.y = event.y;
-    for (let i = 0; i < 5; i++) {   //use json for 5 value
+    for (let i = 0; i < particleAmount; i++) {
         particlesArray.push(new Particle())
     }
 })
@@ -66,7 +76,7 @@ function handleParticles() {
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     handleParticles()
-    hue += 3    //use json for value
+    hue += hueChangeSpeed
     requestAnimationFrame(animate)
 }
 
